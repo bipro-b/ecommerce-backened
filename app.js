@@ -10,9 +10,10 @@ app.use(cors());
 //routing
 
 const productRoute = require("./routes/product.routes");
-const Product = require("./models/productModel");
+const userRoute = require("./routes/user.routes");
 
 app.use("/api/v1/products", productRoute);
+app.use("/api/v1/user", userRoute);
 
 // middlewire for error
 app.use(errorMiddleware);
